@@ -1,10 +1,10 @@
-<template name="Add_Stuff_Page">
+<template name="Add_Recipes">
   {{#If_Logged_In}}
     <div style="padding-top: 20px" class="ui text container">
       {{> quickForm
       collection=stuffCollection
       template="semanticUI"
-      id="AddStuffForm"
+      id="AddRecipeForm"
       type="insert"
       resetOnSuccess=true}}
     </div>

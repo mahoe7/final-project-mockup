@@ -1,4 +1,4 @@
-<template name="List_Stuff_Page">
+<template name="Cookbook">
   {{#If_Logged_In}}
     <div class="ui text container">
       {{#if Template.subscriptionsReady}}
@@ -6,8 +6,9 @@
           <thead>
           <tr>
             <th>Name</th>
-            <th>Quantity</th>
-            <th>Edit</th>
+            <th>Ingredients</th>
+            <th>Cost</th>
+            <th>Remove</th>
           </tr>
           </thead>
 
@@ -16,7 +17,8 @@
             <tr>
               <td>{{stuff.name}}</td>
               <td>{{stuff.quantity}}</td>
-              <td><a href="{{pathFor 'Edit_Stuff_Page' _id=stuff._id}}">Edit</a></td>
+              <td>$$$</td>
+              <td>X</td>
             </tr>
           {{/each}}
           </tbody>

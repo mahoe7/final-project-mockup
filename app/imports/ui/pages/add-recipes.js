@@ -10,19 +10,19 @@ import { Stuff } from '../../api/stuff/stuff.js';
  * See: https://github.com/aldeed/meteor-autoform#callbackshooks
  */
 AutoForm.hooks({
-  AddStuffForm: {
+  AddRecipeForm: {
     /**
      * After successful form submission, go to List_Stuff_Page.
      * @param formType The form.
      * @param result The result of form submission.
      */
     onSuccess: function onSuccess(formType, result) {
-      FlowRouter.go('List_Stuff_Page');
+      FlowRouter.go('Cookbook');
     },
   },
 });
 
-Template.Add_Stuff_Page.helpers({
+Template.Add_Recipes.helpers({
   stuffCollection() {
     return Stuff;
   },

@@ -8,17 +8,24 @@ FlowRouter.route('/', {
   },
 });
 
-FlowRouter.route('/list', {
-  name: 'List_Stuff_Page',
+FlowRouter.route('/browse', {
+  name: 'Browse_Recipes',
   action() {
-    BlazeLayout.render('App_Body', { main: 'List_Stuff_Page' });
+    BlazeLayout.render('App_Body', { main: 'Browse_Recipes' });
   },
 });
 
 FlowRouter.route('/add', {
-  name: 'Add_Stuff_Page',
+  name: 'Add_Recipes',
   action() {
-    BlazeLayout.render('App_Body', { main: 'Add_Stuff_Page' });
+    BlazeLayout.render('App_Body', { main: 'Add_Recipes' });
+  },
+});
+
+FlowRouter.route('/list', {
+  name: 'Full_List',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Full_List' });
   },
 });
 
@@ -26,6 +33,13 @@ FlowRouter.route('/stuff/:_id', {
   name: 'Edit_Stuff_Page',
   action() {
     BlazeLayout.render('App_Body', { main: 'Edit_Stuff_Page' });
+  },
+});
+
+FlowRouter.route('/cookbook', {
+  name: 'Cookbook',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Cookbook' });
   },
 });
 

@@ -1,0 +1,29 @@
+<template name="Full_List">
+  {{#If_Logged_In}}
+    <div class="ui text container">
+      {{#if Template.subscriptionsReady}}
+        <table style="margin-top: 20px" class="ui celled table">
+          <thead>
+          <tr>
+            <th>Name</th>
+            <th>Ingredients</th>
+            <th>Cost</th>
+          </tr>
+          </thead>
+
+          <tbody>
+          {{#each stuff in stuffList}}
+            <tr>
+              <td>{{stuff.name}}</td>
+              <td>{{stuff.quantity}}</td>
+              <td>$$$</td>
+            </tr>
+          {{/each}}
+          </tbody>
+        </table>
+      {{else}}
+        {{> Loading}}
+      {{/if}}
+    </div>
+  {{/If_Logged_In}}
+</template>

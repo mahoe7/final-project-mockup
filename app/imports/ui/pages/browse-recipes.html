@@ -1,0 +1,16 @@
+<template name="Browse_Recipes">
+  {{#If_Logged_In}}
+  <div class="ui text container">
+    <div class="sixteen wide column">
+      <h1 style="text-align: center;">Search By</h1>
+    </div>
+    <div class="four wide column">
+    {{> Search}}
+    </div>
+    <div class="four wide column">
+      Don't know why this is down here instead of to the side
+      <a class="{{ isActiveRoute 'Full_List' }} item" href="{{ pathFor 'Full_List' }}" style="color: blue">Full List</a>
+    </div>
+  </div>
+  {{/If_Logged_In}}
+</template>
