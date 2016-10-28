@@ -1,12 +1,12 @@
 import { AutoForm } from 'meteor/aldeed:autoform';
 import { FlowRouter } from 'meteor/kadira:flow-router';
 import { Template } from 'meteor/templating';
-import { Stuff } from '../../api/stuff/stuff.js';
+import { Recipes } from '../../api/recipes/recipes.js';
 
 /* eslint-disable object-shorthand, no-unused-vars */
 
 /**
- * After successful addition of a new Stuff document, go to List page.
+ * After successful addition of a new Recipes document, go to List page.
  * See: https://github.com/aldeed/meteor-autoform#callbackshooks
  */
 AutoForm.hooks({
@@ -24,6 +24,6 @@ AutoForm.hooks({
 
 Template.Add_Recipes.helpers({
   stuffCollection() {
-    return Stuff;
+    return Recipes;
   },
 });

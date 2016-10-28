@@ -29,10 +29,10 @@ FlowRouter.route('/list', {
   },
 });
 
-FlowRouter.route('/stuff/:_id', {
-  name: 'Edit_Stuff_Page',
+FlowRouter.route('/edit/:_id', {
+  name: 'Edit_Profile',
   action() {
-    BlazeLayout.render('App_Body', { main: 'Edit_Stuff_Page' });
+    BlazeLayout.render('App_Body', { main: 'Edit_Profile' });
   },
 });
 

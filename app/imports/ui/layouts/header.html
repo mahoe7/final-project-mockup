@@ -1,10 +1,10 @@
 <template name="Header">
-    <div class="ui top fixed borderless inverted menu">
+  <div class="ui top fixed borderless inverted menu">
   <div class="ui container">
       <a class="item" href="{{pathFor 'Home_Page'}}"><h1>Toaster Oven Lovin'</h1></a>
       {{#if currentUser}}
         <a class="{{ isActiveRoute 'Cookbook' }} item" href="{{ pathFor 'Cookbook' }}">My Cookbook</a>
-        <a class="{{ isActiveRoute 'Edit_Stuff_Page'}} item" href="{{ pathFor 'Edit_Stuff_Page' }}">Edit Profile</a>
+        <a class="{{ isActiveRoute 'Edit_Profile'}} item" href="{{ pathFor 'Edit_Profile' }}">Edit Profile</a>
         <a class="{{ isActiveRoute 'Browse_Recipes' }} item" href="{{ pathFor 'Browse_Recipes' }}">Browse Recipes</a>
     <a class="{{ isActiveRoute 'Full_List' }} item" href="{{ pathFor 'Full_List' }}">Full List</a>
         <a class="{{ isActiveRoute 'Add_Recipes'}} item" href="{{ pathFor 'Add_Recipes' }}">Add Recipes</a>

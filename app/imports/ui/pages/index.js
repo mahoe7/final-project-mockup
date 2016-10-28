@@ -1,8 +1,8 @@
 import './add-recipes.html';
 import './add-recipes.js';
 
-import './edit-stuff-page.html';
-import './edit-stuff-page.js';
+import './edit-profile.html';
+import './edit-profile.js';
 
 import './home-page.html';
 

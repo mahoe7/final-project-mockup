@@ -1,10 +1,10 @@
-<template name="Edit_Stuff_Page">
+<template name="Edit_Profile">
   {{#If_Logged_In}}
     <div style="padding-top: 20px" class="ui text container">
       {{> quickForm
       collection=stuffCollection
       template="semanticUI"
-      id="EditStuffForm"
+      id="EditProfileForm"
       type="update"
       doc=getDoc
       buttonContent="Update"

@@ -1,7 +1,7 @@
 import { AutoForm } from 'meteor/aldeed:autoform';
 import { FlowRouter } from 'meteor/kadira:flow-router';
 import { Template } from 'meteor/templating';
-import { Stuff } from '../../api/stuff/stuff.js';
+import { Recipes } from '../../api/recipes/recipes.js';
 
 /* eslint-disable object-shorthand, no-unused-vars */
 
@@ -10,24 +10,24 @@ import { Stuff } from '../../api/stuff/stuff.js';
  * See: https://github.com/aldeed/meteor-autoform#callbackshooks
  */
 AutoForm.hooks({
-  EditStuffForm: {
+  EditProfileForm: {
     /**
      * After successful form submission, go to List_Stuff_Page.
      * @param formType The form.
      * @param result The result of form submission.
      */
     onSuccess: function onSuccess(formType, result) {
-      FlowRouter.go('List_Stuff_Page');
+      FlowRouter.go('Full_List');
     },
   },
 });
 
-Template.Edit_Stuff_Page.helpers({
+Template.Edit_Profile.helpers({
   getDoc() {
-    return Stuff.findOne(FlowRouter.getParam('_id'));
+    return Recipes.findOne(FlowRouter.getParam('_id'));
   },
   stuffCollection() {
-    return Stuff;
+    return Recipes;
   },
 });
 
